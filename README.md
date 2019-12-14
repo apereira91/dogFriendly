@@ -12,7 +12,7 @@ This is a dog friendly website that will help the user find dog friendly resourc
 
 Wireframe 
 
-* XD Wireframe
+* XD Wireframes
 
 APIs
 
