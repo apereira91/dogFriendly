@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="styles.css" rel="stylesheet">
+  <script defer type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaDfpOgJf34Llse-8mxAQZ0FTTV3Us_4E&libraries=places"></script>
+  <script defer src="dogServer.js"></script>
+  <title>Dog Server</title>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="icon-container">
+        <canvas id="icon" width="100" height="100"></canvas>
+      </div>
+    </div>
+    <div class="content">
+      <div class="general-information">
+        <div class="status" data-status>Enter A Location</div>
+        <div class="location" data-location>To Find The Nearest Dog Amenities</div>
+      </div>
+      <div class="detail-section">
+        <div class="detail">
+          <div class="title">Closest Dog Park</div>
+          <div class="value" Dog-Park>TBD</div>
+        </div>
+        <div class="detail bordered">
+            <div class="title">Closest Vet</div>
+          <div class="value" data-vet>TBD</div>
+        </div>
+        <div class="detail">
+          <div class="title">Closest Pet Store</div>
+          <div class="value" data-PetStore>TBD</div>
+        </div>
+      </div>
+      <div class="city-search-container">
+        <input type="text" class="city-search" data-city-search placeholder="Enter Location">
+      </div>
+    </div>
+  </div>
+</body>
+</html>
