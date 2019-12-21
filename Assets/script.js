@@ -21,8 +21,36 @@ submitKey.on("click", function (event) {
     }
 
     $.ajax(settings).then(function (response) {
-        $(".results-block").text(JSON.stringify(response));
-        console.log(response);
-    });
+        console.log(response)
+        console.log(JSON.parse(response))
+        // console.log(response);
 
-})
+        var parsedResponse = JSON.parse(response)
+        var results = parsedResponse.results;
+
+        console.log(results)
+
+        for (var i = 0; i < results.length; i++) {
+            var resultsDiv = $("<div>");
+        
+            var title = results[i].title;
+            var t = $("<p>").text (title).attr("class", "text-white text-xl p-4 font-bold leading-tight");
+
+            var href = $("<a>");
+            href.attr("href", results[i].href.url);
+
+            var ingred = results[i].ingredients;
+            var inc = $("<p>").text("Ingredients: " + ingred).attr("class", "text-white text-l p-4 leading-tight");
+
+            var foodImage = $("<img>");
+            foodImage.attr("src", results[i].thumbnail);
+
+            resultsDiv.prepend(t);
+            resultsDiv.prepend(href);
+            resultsDiv.prepend(inc);
+            resultsDiv.prepend(foodImage);
+
+            $(".results-block").prepend(resultsDiv);
+        }
+    })
+});
