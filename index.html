@@ -8,10 +8,11 @@
     <title>Dog Friendly</title>
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="Assets/style.css">
+    <script src=“https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js”></script>
 
 </head>
 
-<body>
+<body class="homepage">
     <div class="page-container">
         <div class="header-block">
             <h1 class="text-white">Dog Friendly World</h1>
@@ -22,7 +23,7 @@
                 <div class="search-input p-8"> 
                     <form id="city-search">
                         <label value="city-label" class="block text-gray-700 text-xl font-bold mb-2">Enter Your Location:</label>
-                        <input type="text" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" value="New York, NY" placeholder="New York, NY">
+                        <input type="text" id="cityInput" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" value="New York, NY" placeholder="New York, NY">
                         <input type="submit" class="text-white font-bold py-2 px-4 rounded mx-auto block mt-4 w-full uppercase formBtn" value="Submit">
                     </form>
                 </div>
@@ -35,7 +36,7 @@
             </div>
         </div>
     </div>
-
+    
 </body>
 
 </html>
