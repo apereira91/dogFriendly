@@ -1,8 +1,9 @@
 body.homepage {
     background-image: url("dogFriendly-background.jpg");
     background-size: cover;
+    background-attachment: fixed;
+    height: 100%;
     background-position: center;
-    background-position-y: -550px;
     margin: 0;
     padding: 0;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -13,7 +14,8 @@ body.recipeHomepage {
     background-image: url("dogRecipe-background.jpg");
     background-size: cover;
     background-position: center;
-    background-position-y: 0;
+    background-attachment: fixed;
+    height: 100%;
     margin: 0;
     padding: 0;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -24,13 +26,17 @@ body.eventsHomepage {
     background-image: url("dogEvents-background.jpg");
     background-size: cover;
     background-position: center;
-    background-position-y: -200px;
+    background-attachment: fixed;
+    height: 100%;
     margin: 0;
     padding: 0;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-repeat: no-repeat;
 }
-
+.content-container{
+    max-width: 1200px;
+    margin: auto;
+}
 .header-block {
     width: 100%;
     background: linear-gradient(#000, rgba(0,0,0,0.3) 50%, transparent 80%); 
@@ -42,6 +48,8 @@ body.eventsHomepage {
     padding: 20px 30px;
     font-weight: bold;
     font-size: 44px;
+    max-width: 1200px;
+    margin: auto;
     text-transform: uppercase;
 }
 
@@ -58,4 +66,29 @@ h3 {
     text-align: center;
     text-transform: uppercase;
     background-color: #18c8ec;
+}
+
+div#each-result-map0, div#each-result-map1, div#each-result-map2, div#each-result-map3, div#each-result-map4  {
+    justify-content: flex-end!important;
+    width: 50%!important;
+    display: flex;
+}
+
+div#each-result-details0, div#each-result-details1, div#each-result-details2, div#each-result-details3, div#each-result-details4 {
+    justify-content: flex-start!important;
+    width: 50%!important;
+    display: flex;
+    flex-wrap: wrap;
+}
+div#each-result-details0 div, div#each-result-details1 div, div#each-result-details2 div, div#each-result-details3 div, div#each-result-details4 div {
+    width: 100%;
+}
+
+@media only screen and (max-width: 767px){
+    .content-container.flex {
+        flex-wrap: wrap;
+    }
+    .content-container.flex div {
+        width: 100%!important;
+    }
 }
