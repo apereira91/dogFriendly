@@ -41,7 +41,8 @@ submitKey.on("click", function (event) {
                 var t = $("<h3>").text(title).attr("class", "text-white text-xl p-4 font-bold leading-tight");
 
                 var href = $("<a>");
-                href.attr("href", results[i].href).attr("target", "_blank").text("See Recipe").attr("class", "font-bold");
+                href.attr("href", results[i].href).attr("target", "_blank").text("See Recipe").addClass("text-white text-center font-bold py-1 px-2 rounded m-3 block mt-4 w-32 float-right uppercase formBtn");
+                $("<button>").text(href);
 
                 var ingred = results[i].ingredients;
                 var inc = $("<p>").text("Ingredients: " + ingred).attr("class", "text-black text-l p-4 leading-tight");
