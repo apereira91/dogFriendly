@@ -30,31 +30,34 @@ submitKey.on("click", function (event) {
 
         console.log(results)
 
+
         for (var i = 0; i < results.length; i++) {
-            var resultsDiv = $("<div>");
+            var resultsDiv = $("<div>").attr("class", "bg-white");
         
             var title = results[i].title;
-            var t = $("<p>").text (title).attr("class", "text-white text-xl p-4 font-bold leading-tight");
+            var t = $("<h3>").text (title).attr("class", "text-white text-xl p-4 font-bold leading-tight");
 
             var href = $("<a>");
-            href.attr("href", results[i].href.url).attr("target", "_blank").text("See Recipe");
+            href.attr("href", results[i].href).attr("target", "_blank").text("See Recipe").attr("class", "font-bold");
 
             var ingred = results[i].ingredients;
-            var inc = $("<p>").text("Ingredients: " + ingred).attr("class", "text-white text-l p-4 leading-tight");
+            var inc = $("<p>").text("Ingredients: " + ingred).attr("class", "text-black text-l p-4 leading-tight");
 
             var foodImage = $("<img>");
             foodImage.attr("src", results[i].thumbnail);
 
-            resultsDiv.prepend(t);
-            resultsDiv.prepend(href);
-            resultsDiv.prepend(inc);
-            resultsDiv.prepend(foodImage);
 
-            $(".results-block").prepend(resultsDiv);
+            resultsDiv.append(t);
+            resultsDiv.append(href);
+            resultsDiv.append(inc);
+            resultsDiv.append(foodImage);
+
+            $("<div>").append(resultsDiv);
+
+            $(".results-block").append(resultsDiv);
 
         }
         
     })
-    var headTitle = resultsDiv.prepend("Yummy Yummy Treats");
-    headTitle.attr("class", "text-white uppercase bg-transparent text-3xl text-left font-bold");
+    
 });
