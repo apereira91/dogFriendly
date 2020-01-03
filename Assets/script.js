@@ -51,6 +51,10 @@ submitKey.on("click", function (event) {
             resultsDiv.prepend(foodImage);
 
             $(".results-block").prepend(resultsDiv);
+
         }
+        
     })
+    var headTitle = resultsDiv.prepend("Yummy Yummy Treats");
+    headTitle.attr("class", "text-white uppercase bg-transparent text-3xl text-left font-bold");
 });
