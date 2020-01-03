@@ -15,7 +15,7 @@ $.ajax({
     
     console.log(response);
     var search = response.results;
-    $(".results-block").append($("<div/>").attr("id", "results-heading").addClass("mb-8 shadow-md"));
+    $(".results-block").append($("<div/>").attr("id", "results-heading").addClass("mb-8"));
     $("#results-heading").append($("<h2/>").addClass("text-white uppercase bg-transparent text-3xl text-left font-bold").text("Restaurants in " + cityInput));
     for (var i = 0; i < 5; i++){
     $(".results-block").append($("<div/>").attr("id", "each-result" + i).addClass("flex flex-wrap rounded-lg bg-white overflow-hidden mb-8 shadow-md"));
