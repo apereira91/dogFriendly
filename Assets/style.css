@@ -1,3 +1,7 @@
+.bg-nav {
+    background-color: #18c8ec!important;
+}
+
 body.homepage {
     background-image: url("dogFriendly-background.jpg");
     background-size: cover;
