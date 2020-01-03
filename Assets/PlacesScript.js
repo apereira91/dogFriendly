@@ -33,10 +33,7 @@ $.ajax({
         $("#each-result-details" + i).append($("<div/>").attr("class", "results-closed text-red-700 font-bold italic").text("Sorry we aren't open right now!"));
     }
 
-    $("#each-result-map"+ i).append($('<iframe/>').attr("src","https://www.google.com/maps/place/"+ search[i].formatted_address));
-    //https://www.google.com/maps/search/?api=1&query="+ search[i].id));
-    //"src","https://maps.google.com/maps?q="+ search[i].geometry.location.lat +","+ search[i].geometry.location.lat +"&t=&z=15&ie=UTF8&iwloc=&output=embed&key=AIzaSyCB-Jo4by4i-3mz-i0gvcdtkIFFP8utzIc"));
-   
+    $("#each-result-map"+ i).append($('<iframe/>').attr("src","https://maps.google.com/maps?q="+ search[i].geometry.location.lat +","+ search[i].geometry.location.lng +"&t=&z=15&ie=UTF8&iwloc=&output=embed&key=AIzaSyCB-Jo4by4i-3mz-i0gvcdtkIFFP8utzIc"));
 
     console.log(search[i].name);
     console.log(search[i].formatted_address);
