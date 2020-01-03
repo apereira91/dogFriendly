@@ -130,3 +130,46 @@ div#each-result-details0 div, div#each-result-details1 div, div#each-result-deta
     width: 100%;
     margin: auto;
 }
+
+/*--- Styling for the active buttons on the places sidebar nav ---*/
+.placesCategory {
+    width: 100%;
+    text-align: left;
+    padding: 10px 30px;
+    font-size: 18px;
+    text-transform:uppercase!important;
+    font-weight: bold;
+    color: #607D8B;
+    position: relative;
+}
+
+.placesCategory.active {
+    color: #000;
+    border: none!important;
+}
+
+.placesCategory.active:before {
+    content:'';
+    width: 80px;
+    height: 3px;
+    display: block;
+    background-color: #18c8ec;
+    position: absolute;
+    bottom: 8px;
+    border: none!important;
+}
+.placesCategory.active:after {
+    content:'\f061';
+    font-family: 'FontAwesome';
+    color: #18c8ec;
+    float: right;
+    border: none!important;
+}
+@media only screen and (max-width: 767px){
+    .placesCategory.active:after {
+        content:'\f063';
+    }
+}
+.category-buttons {
+    margin-bottom: 30px;
+}
