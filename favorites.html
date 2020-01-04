@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Dog Friendly</title>
+    <title>Dog Friendly Favorites</title>
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="Assets/style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" crossorigin="anonymous"></script>
+    <script src=“https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js”></script>
     <script src="https://kit.fontawesome.com/a20d05465c.js" crossorigin="anonymous"></script>
 </head>
-
-<body class="homepage">
+<body class="favoritesPage">
     <nav class="flex items-center justify-between bg-nav p-6">
         <div class="flex nav-content">
             <div class="flex items-center justify-start flex-shrink-0 text-white mr-6">
@@ -34,13 +32,13 @@
             <div class="w-full block flex justify-start items-center w-auto">
                 <div class="text-lg">
                     <a href="index.html"
-                        class="block mt-4 text-lg inline-block mt-0 text-white hover:text-black mr-4 active">
+                        class="block mt-4 text-lg inline-block mt-0 text-white hover:text-black mr-4">
                         Home
                     </a>
                     <a href="recipe.html" class="block mt-4 text-lg inline-block mt-0 text-white hover:text-black mr-4">
                         Recipes
                     </a>
-                    <a href="favorites.html" class="block mt-4 text-lg inline-block mt-0 text-white hover:text-black">
+                    <a href="favorites.html" class="block mt-4 text-lg inline-block mt-0 text-white active hover:text-black">
                         Favorites
                     </a>
                 </div>
@@ -49,34 +47,11 @@
     </nav>
     <div class="page-container">
         <div class="header-block">
-            <h1 class="text-white leading-tight py-8">Dog Friendly World</h1>
+            <h1 class="text-white">Dog Friendly Favorites</h1>
         </div>
-        <div class="content-container flex">
-            <div class="w-3/12 m-8 overflow-hidden round-lg ">
-                <div class="side-block overflow-hidden">
-                    <h3 class="text-white text-xl p-4 font-bold leading-tight">All the things your dogs need in one
-                        place!</h3>
-                    <div class="search-input p-8">
-                        <form id="city-search">
-                            <label value="city-label" class="block text-gray-700 text-xl font-bold mb-2">Enter Your
-                                Location:</label>
-                            <input type="text" id="city-input"
-                                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                                placeholder="New York, NY">
-                            <input type="submit" id="city-submit"
-                                class="text-white font-bold py-2 px-4 rounded mx-auto block mt-4 w-full uppercase formBtn"
-                                placeholder="Submit" value="Submit">
-                        </form>
-                    </div>
-                    <div class="category-buttons">
-                        <button id=PetStores class=placesCategory>Pet Stores</button>
-                        <button id=dogRestaurants class=placesCategory>Restaurants</button>
-                        <button id=dogVets class=placesCategory>Veterinarians</button>
-                    </div>
-                </div>
-            </div>
-            <div class="results-block w-9/12 m-8">
-
+        <div class="content-container">
+            <div class="side-block w-3/12 m-8 overflow-hidden">
+                <h3 class="text-white text-xl p-4 font-bold leading-tight">Dog Friendly Favorites</h3>
             </div>
         </div>
     </div>
@@ -84,8 +59,7 @@
         <i class="fas fa-arrow-alt-circle-up"></i>
     </button>
 
-    <script src="Assets/PlacesScript.js"></script>
-
+    <script src="Assets/script.js"></script>
+    
 </body>
-
 </html>
