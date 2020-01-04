@@ -26,7 +26,7 @@ body.recipeHomepage {
     background-repeat: no-repeat;
 }
 
-body.eventsHomepage {
+body.favoritesPage {
     background-image: url("dogEvents-background.jpg");
     background-size: cover;
     background-position: center;
@@ -104,37 +104,55 @@ div#each-result-details0 div, div#each-result-details1 div, div#each-result-deta
     .content-container.flex {
         flex-wrap: wrap;
     }
-    .content-container.flex div {
+    .content-container .side-bar {
         width: 100%!important;
+    }
+    .recipeHomepage .results-block{
+        width: 100%;
     }
 }
 
 /*--- Additional Styling for the recipe page ---*/
+.recipeHomepage .results-block{
+    display: flex;
+    flex-wrap: wrap;
+}
+.recipe-div{
+    display: flex;
+    position: relative;
+    width: 48%;
+    padding-bottom: 60px;
+}
+.recipe-div:nth-child(odd){
+    margin-right: 4%;
+}
 .recipe-div img.recipe-image {
-    width: 150px;
-    height: 100px;
+    width: 100%;
+    height: 120px;
     object-fit: cover;
     order: 1;
 }
 .recipe-div .formBtn{
+    width: 150px;
+    margin-left: calc(50% - 75px);
     order: 3;
+    position: absolute;
+    bottom: 0px;
 }
 .recipe-div p {
-    width: calc(100% - 150px);
+    width: 100%;
     order: 2;
 }
 
-@media only screen and (max-width: 400px){
-    .recipe-div img.recipe-image {
+@media only screen and (max-width: 500px){
+   .recipe-div{
         width: 100%;
     }
-    .recipe-div .formBtn{
-        margin: 10px auto;
-    }
-    .recipe-div p {
-        width: 100%;
+    .recipe-div:nth-child(odd){
+        margin-right: 0px;
     }
 }
+
 
 /*--- Additional Styling for the Nav Bar ---*/
 .nav-content {
