@@ -129,7 +129,7 @@ div#each-result-details0 div, div#each-result-details1 div, div#each-result-deta
 .recipe-div img.recipe-image {
     width: 100%;
     height: 120px;
-    object-fit: cover;
+    object-fit: contain;
     order: 1;
 }
 .recipe-div .formBtn{
