@@ -66,3 +66,7 @@ submitKey.on("click", function (event) {
         $('#ingredients-input').val('').removeAttr('checked').removeAttr('selected');
     };
     recipeCall()
+
+    function scrollToTop() { 
+        window.scrollTo({top: 0, behavior: 'smooth'}); 
+    } 
